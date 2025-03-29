@@ -1,0 +1,100 @@
+.background {
+  background-color: var(--mainColor);
+  z-index: -1;
+}
+.container{
+  position: relative;
+  z-index: 9999 !important;
+  min-height: 100vh;
+  padding: 15px;
+}
+
+//Header
+
+.header h1{
+  color: white;
+  font-size: 68px;
+  text-align: center;
+  span{
+    color: var(--secondColor);
+  }
+}
+//Claim Pi
+.claimPiBoxContainer{
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 15px;
+}
+.claimPiBox, input{
+  border: 1px solid var(--secondColor);
+  padding: 15px;
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  outline: none;
+  font-size: 22px;
+  &::placeholder{
+    font-size: 22px;
+  }
+}
+input{
+  border-radius: 5px;
+}
+.claimBtn{
+  background-color: var(--secondColor);
+  outline: none;
+  width: 60%;
+  margin: 0 auto;
+  height: 70px;
+}
+.error{
+  color: #f44444;
+  text-align: center;
+  font-size: 20px;
+}
+.loading{
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+//Congratulation
+.congratulation{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  justify-content: center;
+  img{
+    max-width: 60%;
+    margin: 0 auto;
+  }
+  h1{
+    text-align: center;
+    color: var(--secondColor);
+  }
+}
+
+//footer
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0 15px 15px;
+  box-sizing: border-box;
+  background-color: #ccc;
+  h4{
+    padding: 10px 0;
+  }
+  .copyright{
+    padding-top: 15px;
+    text-align: center;
+  }
+}
