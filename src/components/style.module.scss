@@ -36,6 +36,7 @@
   text-align: center;
   outline: none;
   font-size: 22px;
+  resize: none;
   &::placeholder{
     font-size: 22px;
   }
@@ -96,5 +97,23 @@ input{
   .copyright{
     padding-top: 15px;
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 756px) {
+  .claimPiBox, input{
+    width: 70%;
+  }
+  .claimBtn{
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .claimPiBox, input{
+    width: 50%;
+  }
+  .claimBtn{
+    width: 30%;
   }
 }
