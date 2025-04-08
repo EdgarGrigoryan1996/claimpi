@@ -29,10 +29,18 @@
     }
     p{
       font-size: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
       line-height: 33px;
       text-align: justify;
     }
+  button{
+    transition: all 0.2s ease;
+    &:hover{
+      background-color: var(--secondColor) !important;
+      color: var(--mainColor) !important;
+    }
+  }
+
   }
   .imageBlock{
     flex-basis: 50%;
@@ -109,6 +117,11 @@
     }
     button{
       margin-top: 50px;
+      transition: all 0.2s ease;
+      &:hover{
+        background-color: var(--secondColor) !important;
+        color: var(--mainColor) !important;
+      }
     }
   }
 }
@@ -379,6 +392,7 @@
     .content{
       padding-left: 30px;
       padding-right: 30px;
+      text-align: center;
       h2{
         font-size: 42px;
       }
@@ -387,6 +401,7 @@
       }
       button{
         font-size: 14px !important;
+        margin-bottom: 70px;
       }
     }
   }
@@ -489,6 +504,8 @@
       justify-content: flex-start;
       button{
         font-size: 10px !important;
+        height: 50px !important;
+        width: 150px !important;
       }
     }
     input{
@@ -501,6 +518,26 @@
 }
 
 @media screen and (max-width: 542px){
+  //Last airdrop
+  .lastAirdrop{
+    .content{
+      button{
+        font-size: 14px !important;
+        width: 200px !important;
+        height: 50px !important;
+      }
+    }
+  }
+  //How it works
+  .howItWorks{
+    .content{
+      a button{
+        width: 200px !important;
+        height: 50px !important;
+      }
+    }
+  }
+
   //Download
   .download{
     h2 {
