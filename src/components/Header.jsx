@@ -4,7 +4,7 @@ function Header() {
   return (
     <div className={s.header}>
       <h1>
-        <span>Claim</span> 314 PI FREE
+        <span>Claim</span> last 314 PI FREE
       </h1>
     </div>
   );
