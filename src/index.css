@@ -1,12 +1,12 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   --mainColor: #61357E;
   --secondColor: #FBB44A;
-  --bgAnimationStars:#c49952;
 }
 
 a {
@@ -31,13 +31,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+
 
 @media (prefers-color-scheme: light) {
   :root {

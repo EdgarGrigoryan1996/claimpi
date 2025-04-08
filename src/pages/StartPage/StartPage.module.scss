@@ -1,0 +1,513 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--mainColor);
+  padding: 10px;
+
+  img {
+    height: 50px;
+  }
+}
+
+// Last Airdrop
+.lastAirdrop{
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  .content{
+    flex-basis: 50%;
+    padding-left: 100px;
+    h2{
+      font-size: 72px;
+      margin-bottom: 20px;
+      span{
+        color: var(--mainColor);
+      }
+    }
+    p{
+      font-size: 20px;
+      margin-bottom: 20px;
+      line-height: 33px;
+    }
+  }
+  .imageBlock{
+    flex-basis: 50%;
+    text-align: center;
+    img{
+      max-width: 100%;
+      max-height: 900px;
+    }
+  }
+}
+
+//Steps
+.steps{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  div{
+    border:1px solid #ccc;
+    padding: 50px;
+    width: 500px;
+    svg{
+      font-size: 64px;
+      color: var(--mainColor);
+    }
+    p{
+      font-size: 22px;
+    }
+  }
+  div.step1{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  div.step3{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+
+//How it Works
+
+.howItWorks{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  .imageBlock{
+
+  }
+  .content{
+    width: 40%;
+    h5{
+      color: var(--secondColor);
+    }
+    h2{
+      font-size: 52px;
+      span{
+        color: var(--mainColor);
+      }
+
+      margin-bottom: 20px;
+    }
+    p{
+      font-size: 20px;
+      margin-bottom: 20px;
+      line-height: 33px;
+    }
+    h4{
+      margin-bottom: 5px;
+    }
+    .bold{
+      color: var(--secondColor);
+    }
+    button{
+      margin-top: 50px;
+    }
+  }
+}
+
+//Download
+.download{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2{
+    font-size: 52px;
+    text-align: center;
+    span{
+      color: var(--mainColor);
+    }
+  }
+  p{
+    color: #aaaaaa;
+  }
+  .markets{
+    display: flex;
+    margin-top: 50px;
+    gap: 50px;
+    .market{
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      width: 200px;
+      align-items: center;
+      background-color: rgba(0,0,0,0.4);
+      color: #ffffff;
+      transition: all 0.2s ease-in-out;
+      padding: 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover{
+        background-color: var(--mainColor);
+      }
+      svg{
+        font-size: 36px;
+      }
+      h4{
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+//Footer
+.footer{
+  margin-top: 100px;
+  background-color: var(--mainColor);
+  padding: 25px;
+  color: white;
+  img{
+    width: 200px;
+    margin-bottom: 50px;
+  }
+  form{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    button{
+      font-size: 16px !important;
+    }
+
+  }
+  input{
+    border: none;
+    background: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--secondColor);
+    width: 30%;
+    margin-top: 50px;
+    margin-left: 0;
+    margin-right: 50px;
+    color: #fff;
+    &::placeholder{
+      color: #fff;
+    }
+  }
+  p{
+    margin-top: 25px;
+  }
+  .copyRight{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    a{
+      color: #fff;
+    }
+    svg{
+      margin-right: 10px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px){
+  // Last Airdrop
+  .lastAirdrop{
+    margin-top: 80px;
+    .content{
+      flex-basis: 50%;
+      padding-left: 50px;
+      h2{
+        font-size: 62px;
+      }
+      p{
+        font-size: 18px;
+      }
+      button{
+        font-size: 16px !important;
+      }
+    }
+    .imageBlock{
+      flex-basis: 50%;
+      text-align: center;
+      img{
+        max-width: 100%;
+        max-height: 500px;
+      }
+    }
+  }
+
+  //Steps
+  .steps{
+    div{
+      padding: 50px 30px;
+      width: 250px;
+      svg{
+        font-size: 48px;
+      }
+      p{
+        font-size: 16px;
+      }
+    }
+  }
+
+  //How it Works
+
+  .howItWorks{
+    .content{
+      width: 40%;
+
+      h2{
+        font-size: 42px;
+        span{
+          color: var(--mainColor);
+        }
+
+        margin-bottom: 20px;
+      }
+      p{
+        font-size: 18px;
+      }
+
+      button{
+        margin-top: 30px;
+        font-size: 16px !important;
+      }
+    }
+  }
+  //Footer
+  .footer{
+    img{
+      width: 150px;
+      margin-bottom: 50px;
+    }
+    form{
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+    }
+    input{
+      width: 50%;
+      margin-top: 50px;
+      margin-left: 0;
+    }
+    button{
+      font-size: 14px !important;
+    }
+  }
+
+}
+
+@media screen and (max-width: 841px){
+  // Last Airdrop
+  .lastAirdrop{
+    .content{
+      padding-left: 30px;
+      h2{
+        font-size: 48px;
+      }
+      p{
+        font-size: 15px;
+      }
+      button{
+        font-size: 14px !important;
+      }
+    }
+  }
+
+  //Steps
+  .steps{
+    div{
+      width: 220px;
+
+    }
+  }
+
+  //How it Works
+
+  .howItWorks{
+    .imageBlock{
+      img{
+        max-width: 300px;
+      }
+    }
+    .content{
+      width: 40%;
+
+      h2{
+        font-size: 32px;
+      }
+      p{
+        font-size: 15px;
+      }
+    }
+  }
+  //Footer
+  .footer{
+    img{
+      width: 150px;
+      margin-bottom: 50px;
+    }
+    form{
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+    }
+    input{
+      width: 50%;
+      margin-top: 50px;
+      margin-left: 0;
+    }
+    button{
+      font-size: 14px !important;
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 756px){
+  .header img{
+    height: 35px;
+  }
+  // Last Airdrop
+  .lastAirdrop{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    .content{
+      padding-left: 30px;
+      h2{
+        font-size: 48px;
+      }
+      p{
+        font-size: 15px;
+      }
+      button{
+        font-size: 14px !important;
+      }
+    }
+  }
+
+  //Steps
+  .steps{
+    flex-direction: column;
+    div{
+      padding: 50px 20px;
+      width: 90%;
+      margin: 0 auto;
+      svg{
+        font-size: 52px;
+      }
+      p{
+        font-size: 18px;
+      }
+    }
+    div.step1{
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 0;
+    }
+    div.step3{
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+  }
+
+  //How it works
+
+  .howItWorks{
+    flex-direction: column;
+    .imageBlock{
+      img{
+        max-width: 300px;
+      }
+    }
+    .content{
+      width: 80%;
+
+      h2{
+        font-size: 42px;
+      }
+      p{
+        font-size: 18px;
+      }
+    }
+  }
+
+  //Download
+  .download{
+    h2 {
+      font-size: 42px;
+      text-align: center;
+    }
+    .markets{
+      display: flex;
+      margin-top: 50px;
+      gap: 30px;
+      .market{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        width: 170px;
+        align-items: center;
+        background-color: rgba(0,0,0,0.4);
+        color: #ffffff;
+        transition: all 0.2s ease-in-out;
+        padding: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover{
+          background-color: var(--mainColor);
+        }
+        svg{
+          font-size: 28px;
+        }
+        h4{
+          font-size: 10px;
+        }
+        h3{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  //Footer
+  .footer{
+    img{
+      width: 150px;
+      margin-bottom: 50px;
+    }
+    form{
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      button{
+        font-size: 10px !important;
+      }
+    }
+    input{
+      width: 50%;
+      margin-top: 50px;
+      margin-left: 0;
+    }
+
+  }
+}
+
+@media screen and (max-width: 542px){
+  //Download
+  .download{
+    h2 {
+      font-size: 36px;
+    }
+    .markets{
+      flex-direction: column;
+      .market{
+        justify-content: center;
+
+      }
+    }
+  }
+}

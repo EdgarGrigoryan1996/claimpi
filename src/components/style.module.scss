@@ -1,22 +1,17 @@
-.background {
-  background-color: var(--mainColor);
-  z-index: -1;
-}
+
 .container{
   position: relative;
-  z-index: 9999 !important;
   min-height: 100vh;
-  padding: 15px;
 }
 
 //Header
 
 .header h1{
-  color: white;
-  font-size: 68px;
+  margin-top: 50px;
+  font-size: 52px;
   text-align: center;
   span{
-    color: var(--secondColor);
+    color: var(--mainColor);
   }
 }
 //Claim Pi
@@ -27,8 +22,13 @@
   flex-direction: column;
   gap: 15px;
 }
+h2{
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
 .claimPiBox, input{
-  border: 1px solid var(--secondColor);
+  border: 1px solid #ccc;
   padding: 15px;
   border-radius: 10px;
   width: 80%;
@@ -45,13 +45,23 @@ input{
   border-radius: 5px;
 }
 .claimBtn{
-  background-color: var(--secondColor);
+  border: 1px solid var(--mainColor);
+  background: none;
+  color: var(--mainColor);
   outline: none;
   width: 60%;
   margin: 0 auto;
   height: 70px;
   letter-spacing: 1px;
 }
+.createWallet p {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto 45px auto;
+  line-height: 30px;
+
+}
+
 .error{
   color: #f44444;
   text-align: center;
@@ -78,16 +88,14 @@ input{
   }
   h1{
     text-align: center;
-    color: var(--secondColor);
+    color: var(--mainColor);
   }
 }
 
 //footer
 
 .footer{
-  position: absolute;
-  bottom: 0;
-  left: 0;
+
   width: 100%;
   padding: 15px 0 15px 15px;
   box-sizing: border-box;
@@ -116,5 +124,15 @@ input{
   }
   .claimBtn{
     width: 30%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .createWallet p {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto 45px auto;
+    line-height: 30px;
+
   }
 }
