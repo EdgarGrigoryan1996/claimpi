@@ -384,6 +384,7 @@
   }
   // Last Airdrop
   .lastAirdrop{
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -520,6 +521,7 @@
 @media screen and (max-width: 542px){
   //Last airdrop
   .lastAirdrop{
+    margin-top: 30px;
     .content{
       button{
         font-size: 14px !important;
@@ -530,6 +532,7 @@
   }
   //How it works
   .howItWorks{
+    margin-top: 50px;
     .content{
       a button{
         width: 200px !important;
@@ -540,6 +543,7 @@
 
   //Download
   .download{
+    margin-top: 50px;
     h2 {
       font-size: 36px;
     }
