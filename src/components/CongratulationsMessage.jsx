@@ -5,7 +5,7 @@ function CongratulationsMessage(props) {
   return (
     <div className={s.congratulation}>
       <img src={img} alt="Congratulations" />
-      <h1>Congratulations you will receive your prize soon</h1>
+      <h1>Congratulations! you will soon be awarded your prize.</h1>
     </div>
   );
 }
